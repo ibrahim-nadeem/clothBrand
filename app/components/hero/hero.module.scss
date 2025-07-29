@@ -1,0 +1,85 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 6rem;
+  min-height: 100vh;
+  background: #fdfdfd;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.tagline {
+  position: relative;
+  display: inline-block;
+  font-size: 1.2rem;
+  color: black;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tagline::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;  
+  left: 0;
+  width: 0;
+  height: 3px;  
+  background-color: black;
+  transition: width 0.4s ease-in-out;
+}
+
+.tagline:hover::after {
+  width: 100%;
+}
+
+.heading {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #000;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 500px;
+}
+
+.button {
+  padding: 0.9rem 2.2rem;
+  background-color: #000;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #333;
+  }
+}
+
+.modelWrapper {
+  position: relative;
+  width: 500px;
+  height: 700px;
+}
+
+.modelImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.2s ease-in-out;
+  opacity: 0;
+}
+
+.active {
+  opacity: 1;
+  z-index: 2;
+}

@@ -1,0 +1,108 @@
+/* app/products/[id]/ProductDetail.module.scss */
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.leftColumn {
+  flex: 1;
+  min-width: 300px;
+}
+
+.thumbnailGallery {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mainImage {
+  margin-top: 1rem;
+  border: 1px solid #eee;
+  padding: 1rem;
+}
+
+.rightColumn {
+  flex: 1;
+  min-width: 300px;
+}
+
+.title {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.sizes {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.sizeButton {
+  padding: 0.5rem 1rem;
+  border: 1px solid black;
+  background: transparent;
+  cursor: pointer;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.quantity button {
+  padding: 0.3rem 0.8rem;
+  background: #eee;
+  border: none;
+  font-size: 1.2rem;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-bottom: 2rem;
+}
+
+.addToCart,
+.buyNow {
+  padding: 1rem;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.addToCart {
+  background-color: black;
+  color: white;
+}
+
+.buyNow {
+  background-color: #cfab59;
+  color: black;
+}
+
+.description p {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .thumbnailGallery {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+}
