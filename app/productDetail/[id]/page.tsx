@@ -2,9 +2,11 @@
 import styles from "./product.module.scss";
 import Image from "next/image";
 import products from "../../id";  
+import { use } from "react"; // 👈 use for async data fetching
+export default function ProductDetail({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = use(params); // 👈 unwrap the promise
 
-export default function ProductDetail({ params }: { params: { id: string } }) {
-  const product= products.find((p) => String(p.id) === params.id);
+  const product = products.find((p) => String(p.id) === id);
 
   if (!product) return <div>Product not found.</div>;
 
